@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hapus Akun - KasirKu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-card: #f8fafc;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-light: #eff6ff;
+      --border: #e2e8f0;
+      --success: #22c55e;
+      --warning: #f59e0b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --bg-card: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-muted: #64748b;
+        --primary: #60a5fa;
+        --primary-light: #1e3a5f;
+        --border: #334155;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 0;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 32px 0 12px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 20px 0 8px;
+    }
+    p { margin-bottom: 12px; color: var(--text-secondary); }
+    ul { margin-bottom: 12px; padding-left: 24px; }
+    li { margin-bottom: 8px; color: var(--text-secondary); }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .step-content { flex: 1; }
+    .step-content p { margin-bottom: 4px; }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .badge-success { background: #dcfce7; color: #166534; }
+    .badge-warning { background: #fef3c7; color: #92400e; }
+    .badge-info { background: var(--primary-light); color: var(--primary); }
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 32px;
+    }
+    .lang-toggle button {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .lang-toggle button:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-toggle">
+      <button onclick="switchLang('id')">Indonesia</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- Indonesia -->
+    <div id="lang-id" class="lang-content active">
+      <h1>Hapus Akun</h1>
+      <p class="last-updated">Terakhir diperbarui: 22 Mei 2026</p>
+
+      <p>
+        Anda dapat menghapus akun KasirKu beserta seluruh data Anda kapan saja.
+        Berikut adalah panduan lengkapnya.
+      </p>
+
+      <h2>Cara Menghapus Akun</h2>
+
+      <div class="card">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <p><strong>Buka aplikasi KasirKu</strong></p>
+            <p>Login ke akun yang ingin Anda hapus.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <p><strong>Masuk ke menu Pengaturan</strong></p>
+            <p>Ketuk ikon roda gigi di pojok kanan bawah tab navigasi.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <p><strong>Pilih "Pengguna" atau "Profil"</strong></p>
+            <p>Menu ini menampilkan informasi akun Anda.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <p><strong>Kirim permintaan hapus akun</strong></p>
+            <p>
+              Kirim email ke <a href="mailto:mohabdujalil@gmail.com">mohabdujalil@gmail.com</a>
+              dengan subjek <strong>"Hapus Akun KasirKu"</strong>
+              dan sertakan alamat email yang terdaftar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Data yang Akan Dihapus</h2>
+      <div class="card">
+        <ul>
+          <li>Profil akun (nama, email, foto profil)</li>
+          <li>Semua data produk yang Anda tambahkan</li>
+          <li>Semua riwayat transaksi penjualan</li>
+          <li>Data pelanggan yang tersimpan</li>
+          <li>Semua catatan hutang piutang</li>
+          <li>Notifikasi dan pengaturan aplikasi</li>
+        </ul>
+      </div>
+
+      <h2>Data yang Tidak Disimpan</h2>
+      <div class="card">
+        <p>
+          Setelah akun dihapus, <strong>semua data akan dihapus permanen</strong>.
+          Tidak ada data yang disimpan atau diarsipkan.
+        </p>
+      </div>
+
+      <h2>Proses Penghapusan</h2>
+      <div class="card">
+        <ul>
+          <li><span class="badge badge-info">1×24 Jam</span> &nbsp; Waktu pemrosesan penghapusan</li>
+          <li><span class="badge badge-success">Permanen</span> &nbsp; Data tidak dapat dikembalikan</li>
+          <li><span class="badge badge-warning">Konfirmasi</span> &nbsp; Anda akan menerima email konfirmasi</li>
+        </ul>
+      </div>
+
+      <h2>Alternatif: Reset Data Sebagian</h2>
+      <p>
+        Jika Anda hanya ingin menghapus data bisnis tanpa menghapus akun,
+        buka <strong>Pengaturan → Reset Data</strong>.
+        Anda dapat memilih jenis data yang akan direset (produk, transaksi, pelanggan, hutang).
+      </p>
+
+      <h2>Kontak</h2>
+      <p>
+        Jika ada pertanyaan, hubungi:
+        <br>Email: <a href="mailto:mohabdujalil@gmail.com">mohabdujalil@gmail.com</a>
+        <br>WhatsApp: <a href="https://wa.me/628985661180" target="_blank" rel="noopener">+62 898-5661-180</a>
+      </p>
+    </div>
+
+    <!-- English -->
+    <div id="lang-en" class="lang-content">
+      <h1>Delete Account</h1>
+      <p class="last-updated">Last updated: May 22, 2026</p>
+
+      <p>
+        You can delete your KasirKu account and all associated data at any time.
+        Below is the complete guide.
+      </p>
+
+      <h2>How to Delete Your Account</h2>
+
+      <div class="card">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <p><strong>Open KasirKu App</strong></p>
+            <p>Log in to the account you want to delete.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <p><strong>Go to Settings</strong></p>
+            <p>Tap the gear icon at the bottom right of the navigation tab.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <p><strong>Select "User" or "Profile"</strong></p>
+            <p>This menu displays your account information.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <p><strong>Send account deletion request</strong></p>
+            <p>
+              Send an email to <a href="mailto:mohabdujalil@gmail.com">mohabdujalil@gmail.com</a>
+              with subject <strong>"Delete KasirKu Account"</strong>
+              and include your registered email address.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Data That Will Be Deleted</h2>
+      <div class="card">
+        <ul>
+          <li>Account profile (name, email, profile photo)</li>
+          <li>All product data you have added</li>
+          <li>All sales transaction history</li>
+          <li>Saved customer data</li>
+          <li>All debt records</li>
+          <li>Notifications and app settings</li>
+        </ul>
+      </div>
+
+      <h2>Data Retention</h2>
+      <div class="card">
+        <p>
+          After account deletion, <strong>all data is permanently deleted</strong>.
+          No data is retained or archived.
+        </p>
+      </div>
+
+      <h2>Deletion Process</h2>
+      <div class="card">
+        <ul>
+          <li><span class="badge badge-info">1×24 Hours</span> &nbsp; Processing time</li>
+          <li><span class="badge badge-success">Permanent</span> &nbsp; Data cannot be recovered</li>
+          <li><span class="badge badge-warning">Confirmation</span> &nbsp; You will receive a confirmation email</li>
+        </ul>
+      </div>
+
+      <h2>Alternative: Partial Data Reset</h2>
+      <p>
+        If you only want to delete business data without deleting your account,
+        go to <strong>Settings → Reset Data</strong>.
+        You can choose which data types to reset (products, transactions, customers, debts).
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have questions, contact:
+        <br>Email: <a href="mailto:mohabdujalil@gmail.com">mohabdujalil@gmail.com</a>
+        <br>WhatsApp: <a href="https://wa.me/628985661180" target="_blank" rel="noopener">+62 898-5661-180</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
+</body>
+</html>
