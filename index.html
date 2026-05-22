@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi - KasirKu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-card: #f8fafc;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-light: #eff6ff;
+      --border: #e2e8f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --bg-card: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-muted: #64748b;
+        --primary: #60a5fa;
+        --primary-light: #1e3a5f;
+        --border: #334155;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 32px;
+    }
+    .lang-toggle button {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .lang-toggle button:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 32px 0 12px;
+      color: var(--text-primary);
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 20px 0 8px;
+      color: var(--text-primary);
+    }
+    p { margin-bottom: 12px; color: var(--text-secondary); }
+    ul { margin-bottom: 12px; padding-left: 24px; }
+    li { margin-bottom: 6px; color: var(--text-secondary); }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .card strong { color: var(--text-primary); }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-toggle">
+      <button onclick="switchLang('id')">Indonesia</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- Indonesia -->
+    <div id="lang-id" class="lang-content active">
+      <h1>Kebijakan Privasi</h1>
+      <p class="last-updated">Terakhir diperbarui: 22 Mei 2026</p>
+
+      <p>
+        KasirKu ("kami", "aplikasi", atau "layanan") berkomitmen untuk melindungi privasi Anda.
+        Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.
+      </p>
+
+      <h2>1. Data yang Dikumpulkan</h2>
+      <div class="card">
+        <p><strong>Akun & Autentikasi:</strong> Alamat email dan nama toko saat pendaftaran.</p>
+        <p><strong>Data Transaksi:</strong> Data produk, penjualan, pelanggan, hutang, dan laporan yang Anda masukkan ke dalam aplikasi.</p>
+        <p><strong>Data Perangkat:</strong> Informasi perangkat (model, sistem operasi) untuk keperluan analitik dan iklan.</p>
+        <p><strong>ID Iklan:</strong> Identifier iklan untuk menampilkan iklan melalui Google AdMob.</p>
+      </div>
+
+      <h2>2. Penggunaan Data</h2>
+      <p>Data yang kami kumpulkan digunakan untuk:</p>
+      <ul>
+        <li>Menyediakan dan mengoperasikan aplikasi KasirKu</li>
+        <li>Autentikasi dan keamanan akun Anda</li>
+        <li>Menyimpan data bisnis Anda (produk, transaksi, laporan)</li>
+        <li>Menampilkan iklan melalui Google AdMob</li>
+        <li>Memberikan dukungan teknis</li>
+        <li>Mengirim pembaruan dan notifikasi terkait layanan</li>
+      </ul>
+
+      <h2>3. Penyimpanan Data</h2>
+      <p>
+        Data Anda disimpan secara aman di <strong>Google Cloud Firestore</strong> (Firebase).
+        Setiap pengguna hanya dapat mengakses data miliknya sendiri, dijamin oleh <strong>Firebase Security Rules</strong>
+        yang mengisolasi data per pengguna berdasarkan UID autentikasi.
+      </p>
+      <p>
+        Data lokal seperti preferensi tema dan bahasa disimpan di perangkat Anda melalui <strong>SharedPreferences</strong>.
+      </p>
+
+      <h2>4. Izin Perangkat</h2>
+      <p>KasirKu meminta izin berikut untuk menjalankan fungsinya:</p>
+      <ul>
+        <li><strong>Kamera:</strong> Untuk memindai barcode produk</li>
+        <li><strong>Bluetooth:</strong> Untuk menghubungkan ke printer termal Bluetooth</li>
+        <li><strong>Penyimpanan:</strong> Untuk mengunggah foto produk dan bukti pembayaran hutang</li>
+        <li><strong>Internet:</strong> Untuk sinkronisasi data dengan Firebase</li>
+      </ul>
+
+      <h2>5. Layanan Pihak Ketiga</h2>
+      <p>Kami menggunakan layanan pihak ketiga berikut:</p>
+      <ul>
+        <li><strong>Firebase (Google):</strong> Autentikasi, database, App Check</li>
+        <li><strong>Google Sign-In:</strong> Login dengan akun Google</li>
+        <li><strong>Google AdMob:</strong> Menampilkan iklan</li>
+        <li><strong>Google Fonts:</strong> Menyediakan font untuk antarmuka aplikasi</li>
+      </ul>
+      <p>
+        Setiap layanan pihak ketiga memiliki kebijakan privasi masing-masing. Kami sarankan Anda membaca
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.
+      </p>
+
+      <h2>6. Keamanan Data</h2>
+      <p>
+        Kami menerapkan langkah-langkah keamanan untuk melindungi data Anda, termasuk:
+      </p>
+      <ul>
+        <li>Firebase Security Rules yang ketat (isolasi data per pengguna)</li>
+        <li>Firebase App Check untuk mencegah akses tidak sah</li>
+        <li>Autentikasi wajib untuk mengakses data</li>
+        <li>Enkripsi data dalam transit (HTTPS)</li>
+      </ul>
+
+      <h2>7. Hak Pengguna</h2>
+      <p>Anda memiliki hak untuk:</p>
+      <ul>
+        <li><strong>Mengakses:</strong> Melihat semua data yang kami simpan tentang Anda</li>
+        <li><strong>Memperbaiki:</strong> Mengubah data akun dan profil toko Anda</li>
+        <li><strong>Menghapus:</strong> Menghapus akun dan data Anda kapan saja</li>
+        <li><strong>Ekspor:</strong> Mengekspor data Anda ke file JSON (fitur backup)</li>
+        <li><strong>Menarik izin:</strong> Menonaktifkan izin perangkat melalui pengaturan sistem</li>
+      </ul>
+
+      <h2>8. Kontak</h2>
+      <p>
+        Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, hubungi kami:
+      </p>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:mohabdujalil@gmail.com">mohabdujalil@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/628985661180" target="_blank" rel="noopener">+62 898-5661-180</a></p>
+      </div>
+
+      <h2>9. Perubahan Kebijakan</h2>
+      <p>
+        Kebijakan privasi ini dapat diperbarui sewaktu-waktu. Perubahan akan diumumkan melalui aplikasi.
+        Dengan terus menggunakan KasirKu setelah perubahan, Anda menyetujui kebijakan yang diperbarui.
+      </p>
+
+      <div class="footer">
+        &copy; 2026 KasirKu. Hak cipta dilindungi.
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="lang-en" class="lang-content">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: May 22, 2026</p>
+
+      <p>
+        KasirKu ("we", "the app", or "service") is committed to protecting your privacy.
+        This Privacy Policy explains how we collect, use, and protect your personal data.
+      </p>
+
+      <h2>1. Data We Collect</h2>
+      <div class="card">
+        <p><strong>Account & Authentication:</strong> Email address and store name during registration.</p>
+        <p><strong>Transaction Data:</strong> Product, sales, customer, debt, and report data you enter into the app.</p>
+        <p><strong>Device Data:</strong> Device information (model, OS) for analytics and advertising.</p>
+        <p><strong>Ad ID:</strong> Advertising identifier for displaying ads via Google AdMob.</p>
+      </div>
+
+      <h2>2. How We Use Your Data</h2>
+      <p>We use the collected data to:</p>
+      <ul>
+        <li>Provide and operate the KasirKu application</li>
+        <li>Authenticate and secure your account</li>
+        <li>Store your business data (products, transactions, reports)</li>
+        <li>Display advertisements via Google AdMob</li>
+        <li>Provide technical support</li>
+        <li>Send updates and service-related notifications</li>
+      </ul>
+
+      <h2>3. Data Storage</h2>
+      <p>
+        Your data is securely stored in <strong>Google Cloud Firestore</strong> (Firebase).
+        Each user can only access their own data, enforced by <strong>Firebase Security Rules</strong>
+        that isolate data per user based on UID authentication.
+      </p>
+      <p>
+        Local data such as theme and language preferences are stored on your device via <strong>SharedPreferences</strong>.
+      </p>
+
+      <h2>4. Device Permissions</h2>
+      <p>KasirKu requires the following permissions to function:</p>
+      <ul>
+        <li><strong>Camera:</strong> To scan product barcodes</li>
+        <li><strong>Bluetooth:</strong> To connect to Bluetooth thermal printers</li>
+        <li><strong>Storage:</strong> To upload product photos and debt payment evidence</li>
+        <li><strong>Internet:</strong> To sync data with Firebase</li>
+      </ul>
+
+      <h2>5. Third-Party Services</h2>
+      <p>We use the following third-party services:</p>
+      <ul>
+        <li><strong>Firebase (Google):</strong> Authentication, database, App Check</li>
+        <li><strong>Google Sign-In:</strong> Login with Google account</li>
+        <li><strong>Google AdMob:</strong> Display advertisements</li>
+        <li><strong>Google Fonts:</strong> Provide fonts for the application interface</li>
+      </ul>
+      <p>
+        Each third-party service has its own privacy policy. We recommend you review
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </p>
+
+      <h2>6. Data Security</h2>
+      <p>We implement security measures to protect your data, including:</p>
+      <ul>
+        <li>Strict Firebase Security Rules (per-user data isolation)</li>
+        <li>Firebase App Check to prevent unauthorized access</li>
+        <li>Mandatory authentication to access data</li>
+        <li>Encryption of data in transit (HTTPS)</li>
+      </ul>
+
+      <h2>7. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> View all data we store about you</li>
+        <li><strong>Correct:</strong> Update your account and store profile data</li>
+        <li><strong>Delete:</strong> Delete your account and data at any time</li>
+        <li><strong>Export:</strong> Export your data to a JSON file (backup feature)</li>
+        <li><strong>Revoke permissions:</strong> Disable device permissions through system settings</li>
+      </ul>
+
+      <h2>8. Contact</h2>
+      <p>If you have questions about this privacy policy, contact us:</p>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:mohabdujalil@gmail.com">mohabdujalil@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/628985661180" target="_blank" rel="noopener">+62 898-5661-180</a></p>
+      </div>
+
+      <h2>9. Policy Changes</h2>
+      <p>
+        This privacy policy may be updated from time to time. Changes will be announced through the application.
+        By continuing to use KasirKu after changes, you agree to the updated policy.
+      </p>
+
+      <div class="footer">
+        &copy; 2026 KasirKu. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
+</body>
+</html>
